@@ -1,0 +1,60 @@
+% SIAM Shared Information Template
+% This is information that is shared between the main document and any
+% supplement. If no supplement is required, then this information can
+% be included directly in the main document.
+
+
+% Packages and macros go here
+\usepackage{lipsum}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{algorithmic}
+\ifpdf
+  \DeclareGraphicsExtensions{.eps,.pdf,.png,.jpg}
+\else
+  \DeclareGraphicsExtensions{.eps}
+\fi
+
+\graphicspath{{./Figures/}}
+
+% Prevent itemized lists from running into the left margin inside theorems and proofs
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=.5in}
+\setlist[itemize]{leftmargin=.5in}
+
+% Add a serial/Oxford comma by default.
+\newcommand{\creflastconjunction}{, and~}
+
+% Used for creating new theorem and remark environments
+\newsiamremark{remark}{Remark}
+\newsiamremark{hypothesis}{Hypothesis}
+\crefname{hypothesis}{Hypothesis}{Hypotheses}
+\newsiamthm{claim}{Claim}
+\newsiamthm{prop}{Proposition}
+
+% Sets running headers as well as PDF title and authors
+\headers{Bayesian inversion of a diffusion model with application to Biology}{J.-C. Croix, N. Durrande, and M. A. \'Alvarez}
+
+% Title. If the supplement option is on, then "Supplementary Material"
+% is automatically inserted before the title.
+\title{Bayesian inversion of a diffusion model with application to Biology\thanks{Submitted to the editors DATE.
+\funding{This work has been supported by Colciencias and ECOS-Nord under the grant C15M04}}}
+
+% Authors: full names plus addresses.
+\author{Jean-Charles Croix\thanks{School of Mathematical and Physical Sciences, University of Sussex, Falmer, UK 
+  (\email{j.croix@sussex.ac.uk}).}
+\and Nicolas Durrande\thanks{Prowler.io, Cambridge, UK 
+  (\email{nicolas@prowler.io}).}
+\and Mauricio A. \'Alvarez\thanks{Department of Computer Science, University of Sheffield, UK 
+  (\email{mauricio.alvarez@sheffield.ac.uk}).}}
+
+\usepackage{amsopn}
+\DeclareMathOperator{\diag}{diag}
+
+%\usepackage{float}
+
+%%% Local Variables: 
+%%% mode:latex
+%%% TeX-master: "ex_article"
+%%% End: 
